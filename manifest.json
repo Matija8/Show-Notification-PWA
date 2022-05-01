@@ -1,0 +1,23 @@
+{
+  "name": "Show Notifications App",
+  "short_name": "Const-Notif",
+  "theme_color": "#ffffff",
+  "background_color": "#004740",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/Random-Choice-PWA/",
+  "start_url": "/Random-Choice-PWA/",
+  "icons": [
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "splash_pages": null
+}
