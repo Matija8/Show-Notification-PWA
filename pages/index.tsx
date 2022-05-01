@@ -9,17 +9,24 @@ const Home: NextPage = (): JSX.Element => {
   const textAreaRef: React.Ref<HTMLTextAreaElement> = useRef(null);
 
   return (
-    <div className={``}>
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
       <SiteHead title="Notification Shower!" />
       <main
         style={{
-          paddingTop: '4rem',
-          height: '99vh',
-          display: 'grid',
-          placeContent: 'start center',
+          marginTop: '2rem',
+          display: 'flex',
+          flexDirection: 'column',
+          // margin: 'auto 1rem',
+          width: '80%',
+          minWidth: '200px',
+          maxWidth: '800px',
         }}
       >
-        <textarea ref={textAreaRef}></textarea>
+        <textarea
+          style={{ flexGrow: 1, height: '60vh' }}
+          rows={5}
+          ref={textAreaRef}
+        ></textarea>
         <button
           onClick={() => {
             const text = textAreaRef.current?.value;
@@ -30,7 +37,7 @@ const Home: NextPage = (): JSX.Element => {
             show(text);
           }}
         >
-          Show notification
+          Show <br /> Notification
         </button>
       </main>
     </div>
@@ -43,7 +50,6 @@ function closeNotificationIfOpen() {
 
 async function show(text: string) {
   // https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API
-  console.log(`*$`, { currentActiveNotification }); //T*DO
   if (text === currentActiveNotification?.title) {
     return;
   }
