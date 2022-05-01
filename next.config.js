@@ -2,7 +2,8 @@
 const withPWA = require('next-pwa');
 const runtimeCaching = require('next-pwa/cache');
 
-const basePath = '/Show-Notification-PWA';
+const isDevEnv = process.env.NODE_ENV === 'development';
+const basePath = isDevEnv ? '' : '/Show-Notification-PWA';
 
 module.exports = withPWA({
   pwa: {
