@@ -1,12 +1,12 @@
 {
   "name": "Show Notifications App",
-  "short_name": "Const-Notif",
+  "short_name": "Notif-App",
   "theme_color": "#ffffff",
   "background_color": "#004740",
   "display": "standalone",
   "orientation": "portrait",
-  "scope": "/Random-Choice-PWA/",
-  "start_url": "/Random-Choice-PWA/",
+  "scope": "/Show-Notification-PWA/",
+  "start_url": "/Show-Notification-PWA/",
   "icons": [
     {
       "src": "icons/icon-192x192.png",
